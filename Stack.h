@@ -14,6 +14,7 @@ public:
     virtual int pop() = 0;
     virtual int top() = 0;
     virtual bool isEmpty() = 0;
+    virtual bool isFull() = 0;
 };
 
 #endif /*Stack_h*/
