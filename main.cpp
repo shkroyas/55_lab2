@@ -9,6 +9,7 @@ int main() {
     } else {
         std::cout << "Stack is not empty" << std::endl;
     }
+    //pushing elements to stack
     stack.push(10);
     stack.push(20);
     stack.push(30);
@@ -17,7 +18,12 @@ int main() {
     stack.push(60);
     stack.push(70);
     stack.push(80);
+    stack.push(90);
+    stack.push(92);
+    
 
-    stack.printStack();
+    stack.printStack();// printing elements in the stack
+
+    stack.push(94);    //stack overflow 
 return 0;
 }

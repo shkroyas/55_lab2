@@ -1,7 +1,7 @@
 #include "ArrayStack.h"
 #include <iostream>
 
-ArrayStack::ArrayStack(int size) : point(0) {
+ArrayStack::ArrayStack(int size) : point(0), capacity(size) {
     ptr = new int[size];
 }
 
