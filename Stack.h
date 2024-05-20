@@ -15,6 +15,7 @@ public:
     virtual int top() = 0;
     virtual bool isEmpty() = 0;
     virtual bool isFull() = 0;
+    virtual void printStack() = 0;
 };
 
 #endif /*Stack_h*/

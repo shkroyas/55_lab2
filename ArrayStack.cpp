@@ -42,3 +42,15 @@ int ArrayStack::top() {
         return -1; // Return a special value to indicate the stack is empty
     }
 }
+
+void ArrayStack::printStack() {
+    if (isEmpty()) {
+        std::cout << "Stack is empty" << std::endl;
+    } else {
+        std::cout << "Stack contents: ";
+        for (int i = 0; i < point; ++i) {
+            std::cout << ptr[i] << " ";
+        }
+        std::cout << std::endl;
+    }
+}

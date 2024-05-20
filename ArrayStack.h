@@ -15,5 +15,6 @@ public:
     void push(int item) override;
     int pop() override;
     int top() override;
+    void printStack() override;
 };
 
