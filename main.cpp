@@ -1,10 +1,10 @@
 #include <iostream>
-#include "ArrayStack.h"
+#include "LinkedListStack.h"
 
 using namespace std;
 
 int main() {
-    ArrayStack stack(10); // Create a stack with capacity of 10
+    LinkedListStack stack; // Create a stack with capacity of 10
     // accessing top element of stack
     stack.top();//Returns Stack is Empty
     //pushing elements to stack

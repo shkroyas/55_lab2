@@ -3,12 +3,18 @@
 #include "LinkedList.h"
 
 // deriving LinkedListStack from base class Stack
-class LinkedListStack : public Stack
-{
-    private:
-        //declaring an object
-        LinkedList l;
+class LinkedListStack {
+private:
+    class Node {
+    public:
+        int data;
+        Node* next;
+        Node(int value) : data(value), next(nullptr) {}
+    };
 
+    Node* topNode;
+    int size; // to keep track of the current size of the stack
+    static const int MAX_SIZE = 10; // maximum stack size
     public:
         //calling a  default constructor
         LinkedListStack();
@@ -20,4 +26,6 @@ class LinkedListStack : public Stack
         int pop();
         int top();
         bool isEmpty();
+        bool isFull();
+        void printStack();
 };
