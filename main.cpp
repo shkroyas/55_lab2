@@ -11,17 +11,8 @@ int main() {
     queue.enqueue(10);
     queue.enqueue(20);
     queue.enqueue(30);
-    queue.enqueue(40);
-    queue.enqueue(50);
     queue.printQueue(); //Prints all the elements in the queue
+    cout << "Front: " << queue.front() << "\n"; // Front: 10
 
-    //Removing elements from queue
-    queue.dequeue();
-    queue.dequeue();
-    queue.dequeue();
-    queue.dequeue();
-    queue.dequeue();
-    queue.dequeue();//Attempting to remove elements from queue when it is empty
-    
 return 0;
 }
