@@ -13,6 +13,7 @@ int main() {
     queue.enqueue(30);
     queue.printQueue(); //Prints all the elements in the queue
     cout << "Front: " << queue.front() << "\n"; // Front: 10
+    cout << "Rear: " << queue.back() << "\n"; // Rear: 30
 
 return 0;
 }
