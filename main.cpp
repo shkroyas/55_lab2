@@ -13,12 +13,9 @@ int main() {
     queue.enqueue(50);
     cout<<"The Queue contents:"<<endl;
     queue.printQueue();//Printing the elements of the queue
-    queue.dequeue();//Dequeuing
-    queue.dequeue();//Dequeuing
-    queue.dequeue();//Dequeuing
-    queue.dequeue();//Dequeuing
-    queue.dequeue();//Dequeuing
-    queue.dequeue();//Queue UnderFlow
+    // Print the front element
+    cout << "Front element: " << queue.front() << endl;
+
     
 
     return 0;
