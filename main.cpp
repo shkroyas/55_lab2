@@ -18,7 +18,10 @@ int main() {
     //Removing elements from queue
     queue.dequeue();
     queue.dequeue();
-    //Follow FIFO order
-    queue.printQueue(); //Prints all the elements in the queue
+    queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();//Attempting to remove elements from queue when it is empty
+    
 return 0;
 }
