@@ -13,8 +13,10 @@ int main() {
     queue.enqueue(50);
     cout<<"The Queue contents:"<<endl;
     queue.printQueue();//Printing the elements of the queue
-    queue.enqueue(55);//Queue Overflow
-
+    queue.dequeue();//Dequeuing
+    queue.dequeue();//Dequeuing
+    cout<<"The Queue contents:"<<endl;
+    queue.printQueue();//Printing the elements of the queue
 
     return 0;
 }
