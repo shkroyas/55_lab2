@@ -15,8 +15,11 @@ int main() {
     queue.printQueue();//Printing the elements of the queue
     queue.dequeue();//Dequeuing
     queue.dequeue();//Dequeuing
-    cout<<"The Queue contents:"<<endl;
-    queue.printQueue();//Printing the elements of the queue
+    queue.dequeue();//Dequeuing
+    queue.dequeue();//Dequeuing
+    queue.dequeue();//Dequeuing
+    queue.dequeue();//Queue UnderFlow
+    
 
     return 0;
 }
