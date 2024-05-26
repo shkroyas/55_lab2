@@ -1,3 +1,4 @@
+#include "Queue.h"
 class ArrayQueue {
 private:
     int* arr;
