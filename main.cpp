@@ -13,10 +13,6 @@ int main() {
     stack.push(30);
     
     stack.printStack();//printing the stack
-
-    stack.pop();//pop the stack
-    stack.pop();//pop the stack
-    stack.pop();//pop the stack
-    stack.pop();//Stack Underflow
+    cout<<stack.top()<<endl;//accessing the top element of stack
 return 0;
 }
