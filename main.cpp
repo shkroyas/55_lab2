@@ -10,7 +10,11 @@ int main() {
     queue.enqueue(10);
     queue.enqueue(20);
     queue.enqueue(30);
+    queue.enqueue(40);
+    queue.enqueue(50);
     queue.printQueue(); //Prints all the elements in the queue
+
+    queue.enqueue(55); //Queue is full
     
 return 0;
 }
