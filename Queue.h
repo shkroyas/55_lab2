@@ -1,3 +1,5 @@
+#ifndef QUEUE_H
+#define QUEUE_H
 class Queue {
 public:
     // Default constructor
@@ -15,3 +17,4 @@ public:
     virtual int back() const = 0;
     virtual void printQueue() const = 0;
 };
+#endif // QUEUE_H

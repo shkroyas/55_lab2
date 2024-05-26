@@ -1,43 +1,64 @@
 #include "LinkedListQueue.h"
-#include "LinkedList.h"
-#include "Queue.h"
-#include "LinkedList.cpp"
 #include <iostream>
 
 using namespace std;
 
-LinkedListQueue::LinkedListQueue() {}
+LinkedListQueue::LinkedListQueue(int maxSize) : frontNode(nullptr), rearNode(nullptr), size(0), maxSize(maxSize) {}
 
-LinkedListQueue::~LinkedListQueue() {}
-
-void LinkedListQueue::enqueue(int element) {
-    list.addToTail(element);
+LinkedListQueue::~LinkedListQueue() {
+    Node* current = frontNode;
+    while (current != nullptr) {
+        Node* temp = current;
+        current = current->next;
+        delete temp;
+    }
 }
 
-LinkedList list;
+void LinkedListQueue::enqueue(int element) {
+    if (size < maxSize) {
+        Node* newNode = new Node(element);
+        if (isEmpty()) {
+            frontNode = rearNode = newNode;
+        } else {
+            rearNode->next = newNode;
+            rearNode = newNode;
+        }
+        size++;
+    } else {
+        cout << "Queue is full. Cannot enqueue." << endl;
+    }
+}
+
 int LinkedListQueue::dequeue() {
-    if (isEmpty()) {
-        cout << "Queue Underflow\n";
+    if (!isEmpty()) {
+        Node* temp = frontNode;
+        int value = frontNode->data;
+        frontNode = frontNode->next;
+        if (frontNode == nullptr) {
+            rearNode = nullptr;
+        }
+        delete temp;
+        size--;
+        return value;
+    } else {
+        cout << "Queue Underflow" << endl;
         return -1; // Special value to indicate underflow
     }
-    int frontElement = front();
-    list.removeFromHead();
-    return frontElement;
 }
 
 bool LinkedListQueue::isEmpty() const {
-    return list.isEmpty();
+    return frontNode == nullptr;
 }
 
 bool LinkedListQueue::isFull() const {
-    return false; // A linked list queue is never full unless memory is exhausted
+    return size == maxSize;
 }
 
 int LinkedListQueue::front() const {
     if (!isEmpty()) {
         return frontNode->data;
     } else {
-        cout << "Queue is empty\n";
+        cout << "Queue is empty" << endl;
         return -1; // Special value to indicate empty queue
     }
 }
@@ -46,7 +67,7 @@ int LinkedListQueue::back() const {
     if (!isEmpty()) {
         return rearNode->data;
     } else {
-        cout << "Queue is empty\n";
+        cout << "Queue is empty" << endl;
         return -1; // Special value to indicate empty queue
     }
 }
@@ -55,6 +76,12 @@ void LinkedListQueue::printQueue() const {
     if (isEmpty()) {
         cout << "Queue is empty" << endl;
     } else {
-        list.display();
+        cout << "Queue contents: ";
+        Node* current = frontNode;
+        while (current != nullptr) {
+            cout << current->data << " ";
+            current = current->next;
+        }
+        cout << endl;
     }
 }

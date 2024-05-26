@@ -1,5 +1,7 @@
+#ifndef LINKEDLISTQUEUE_H
+#define LINKEDLISTQUEUE_H
+
 #include "Queue.h"
-#include "LinkedList.h"
 
 class LinkedListQueue : public Queue {
 private:
@@ -11,15 +13,11 @@ private:
     Node* frontNode;
     Node* rearNode;
     int size;
+    const int maxSize;
 
 public:
-    // Constructor to initialize an empty queue
-    LinkedListQueue();
-
-    // Destructor to free allocated memory
+    LinkedListQueue(int maxSize);
     ~LinkedListQueue();
-
-    // Override virtual functions from Queue
     void enqueue(int element) override;
     int dequeue() override;
     bool isEmpty() const override;
@@ -28,3 +26,5 @@ public:
     int back() const override;
     void printQueue() const override;
 };
+
+#endif // LINKEDLISTQUEUE_H
