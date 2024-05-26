@@ -57,11 +57,20 @@ void LinkedListStack::printStack() {
     if (isEmpty()) {
         cout << "Stack is empty" << endl;
     } else {
-        cout << "Stack contents: ";
+        LinkedListStack tempStack;
         Node* current = topNode;
+
+        // Push all elements to the temporary stack
         while (current != nullptr) {
-            cout << current->data << " ";
+            tempStack.push(current->data);
             current = current->next;
+        }
+
+        // Print elements from the temporary stack
+        cout << "Stack contents: ";
+        while (!tempStack.isEmpty()) {
+            cout << tempStack.top() << " ";
+            tempStack.pop();
         }
         cout << endl;
     }

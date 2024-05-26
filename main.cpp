@@ -12,7 +12,7 @@ int main() {
     stack.push(20);
     stack.push(30);
     stack.push(40);
-
-    cout<<stack.isEmpty()<<endl;//Checking if the stack is empty
+   
+    stack.printStack();//printing the elements of stack
 return 0;
 }
