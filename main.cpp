@@ -7,6 +7,7 @@ int main() {
     cout << "Checking if Array Queue is empty:\n";
     ArrayQueue queue(5);
     cout<<queue.isEmpty()<<endl;
+    //Adding elements to queue
     queue.enqueue(10);
     queue.enqueue(20);
     queue.enqueue(30);
@@ -14,7 +15,10 @@ int main() {
     queue.enqueue(50);
     queue.printQueue(); //Prints all the elements in the queue
 
-    queue.enqueue(55); //Queue is full
-    
+    //Removing elements from queue
+    queue.dequeue();
+    queue.dequeue();
+    //Follow FIFO order
+    queue.printQueue(); //Prints all the elements in the queue
 return 0;
 }
