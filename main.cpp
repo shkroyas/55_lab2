@@ -13,10 +13,8 @@ int main() {
     queue.enqueue(50);
     cout<<"The Queue contents:"<<endl;
     queue.printQueue();//Printing the elements of the queue
-    // Print the front element
-    cout << "Front element: " << queue.front() << endl;
-
-    
+    // Print the back element
+    cout << "Back element: " << queue.back() << endl;
 
     return 0;
 }
